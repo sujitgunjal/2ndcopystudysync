@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Question Paper</title>
+  <link rel="stylesheet" href="/src/styles/upload.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Question Paper</h2>
+    <form id="qp-upload-form">
+      <label for="year">Year:</label>
+      <select id="year" required>
+        <option value="" disabled selected>Select year</option>
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+      </select>
+      
+      <label for="branch">Branch:</label>
+      <select id="branch" required>
+        <option value="" disabled selected>Select branch</option>
+        <option value="CSE">CSE</option>
+        <option value="AIML">AIML</option>
+        <!-- add other branches as needed -->
+      </select>
+      
+      <label for="file">Select File (PDF):</label>
+      <input type="file" id="file" accept="application/pdf" required>
+      
+      <button type="submit">Upload Question Paper</button>
+    </form>
+    <div id="response"></div>
+  </div>
+  <script type="module" src="/src/uploadQP.ts"></script>
+</body>
+</html>
